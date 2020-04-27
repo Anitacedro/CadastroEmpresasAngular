@@ -7,7 +7,7 @@ nele seja criado o database "cadastro" (postgresql://localhost:5432/cadastro) pe
 OBS: no arquivo application.properties contém as informações do banco, caso a criação do banco seja diferente, favor alterar usuário 
 e senha do arquivo.
 
-Na aplicação foi criado um swagger para chamada dos endpoints. Para acesso (http://localhost:80080/swagger-ui.html)
+Na aplicação foi criado um swagger para chamada dos endpoints. Para acesso (http://localhost:8080/swagger-ui.html)
 
 Para executar o angular, é necessário entrar na pasta do projeto CadastroEmpresasAngular/Front-end/angular/ e executar 
 as seguintes chamadas : ng add @ng-bootstrap/ng-bootstrap,npm install ngx-pagination --save e npm i ng2-search-filter --save e então basta dar o comando "ng serve" dentro da pasta que o serviço será startado.
