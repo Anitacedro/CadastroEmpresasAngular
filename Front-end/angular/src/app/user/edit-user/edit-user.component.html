@@ -21,50 +21,49 @@
       </div>
 
       <div class="form-group">
-        <label for="contato">Telefone:</label>
-        <input formControlName="telefone" placeholder="Telefone" name="telefone" class="form-control" id="telefone">
+        <label for="Contato">Telefone:</label>
+        <input type="text" formControlName="contato" placeholder="Contato" name="contato" class="form-control" id="contato">
         <small *ngIf="editForm.controls.contato.invalid && !editForm.controls.contato.pristine">Somente números com ou sem DDD</small>
       </div>
   
       <div class="form-group">
         <label for="email">Email:</label>
-        <input formControlName="email" placeholder="example@domain.com" name="lastName" class="form-control" id="email">
+        <input type="text" formControlName="email" placeholder="example@domain.com" name="lastName" class="form-control" id="email">
         <small *ngIf="editForm.controls.email.invalid && !editForm.controls.email.pristine">O email informado não está no padrão</small>
       </div>
 
-
       <div class="form-group">
-        <label for="cep">CEP:</label>
+        <label for="Cep">CEP:</label>
         <input type="text" formControlName="cep" placeholder="Cep" name="cep" class="form-control" id="cep">
         <small *ngIf="editForm.controls.cep.invalid && !editForm.controls.cep.pristine">Informe o CEP</small>
       </div>
 
       <div class="form-group">
-        <label for="bairro">Bairro:</label>
+        <label for="Bairro">Bairro:</label>
         <input type="text" formControlName="bairro" placeholder="Bairro" name="bairro" class="form-control" id="bairro">
         <small *ngIf="editForm.controls.bairro.invalid && !editForm.controls.bairro.pristine">Informe o Bairro</small>
       </div>
       
             
       <div class="form-group">
-        <label for="logradouro">Logradouro:</label>
+        <label for="Logradouro">Logradouro:</label>
         <input type="text" formControlName="logradouro" placeholder="Logradouro" name="logradouro" class="form-control" id="logradouro">
         <small *ngIf="editForm.controls.logradouro.invalid && !editForm.controls.logradouro.pristine">Informe o logradouro</small>
       </div>
 
       <div class="form-group">
-        <label for="complemento">Complemento:</label>
-        <input formControlName="complemento" placeholder="Complemento" name="complemento" class="form-control" id="complemento">
+        <label for="Complemento">Complemento:</label>
+        <input type="text" formControlName="complemento" placeholder="Complemento" name="complemento" class="form-control" id="complemento">
       </div>
         
       <div class="form-group">
-        <label for="cidade">Cidade:</label>
+        <label for="Cidade">Cidade:</label>
         <input type="text" formControlName="cidade" placeholder="Cidade" name="cidade" class="form-control" id="cidade">
         <small *ngIf="editForm.controls.cidade.invalid && !editForm.controls.cidade.pristine">Informe a Cidade</small>
       </div>
 
       <div class="form-group">
-        <label for="estado">Estado:</label>
+        <label for="Estado">Estado:</label>
         <input type="text" formControlName="estado" placeholder="Estado" name="estado" class="form-control" id="estado">
         <small *ngIf="editForm.controls.estado.invalid && !editForm.controls.estado.pristine">Informe o Estado</small>
       </div>

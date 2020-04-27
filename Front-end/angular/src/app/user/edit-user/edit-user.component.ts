@@ -30,8 +30,7 @@ export class EditUserComponent implements OnInit {
       razaoSocial: [''],
       contato: ['',[ Validators.pattern("^[0-9]*$"),
       Validators.minLength(8),
-      Validators.maxLength(11)
-    ]],
+      Validators.maxLength(11)]],
       email: ['', [Validators.email]],
       cep: [''],
       cidade: [''],

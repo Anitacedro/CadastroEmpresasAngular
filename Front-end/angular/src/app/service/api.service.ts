@@ -8,7 +8,7 @@ import {Observable} from "rxjs/index";
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://localhost:8080/api/';
+  baseUrl: string = 'http://localhost:8080/api/empresas/';
 
   findUsers(texto: string) :Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl+'texto?texto' +texto);
@@ -31,6 +31,6 @@ export class ApiService {
   }
 
   deleteUser(id: number): Observable<any[]> {
-    return this.http.delete<any>(this.baseUrl + 'deletarEmpresa/' + 'id' + id);
+    return this.http.delete<any>(this.baseUrl + 'deletarEmpresa/'+ id);
   }
 }

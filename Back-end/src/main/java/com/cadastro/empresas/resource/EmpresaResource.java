@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/empresas")
 public class EmpresaResource {
 
     @Autowired
@@ -45,7 +45,7 @@ public class EmpresaResource {
     @CrossOrigin
     @ApiOperation(value = "Salva uma empresa")
     @PostMapping("/salvaEmpresa")
-    public ResponseEntity<EmpresaDto> save( @Valid @RequestBody EmpresaDto empresaDto, HttpServletResponse response) {
+    public ResponseEntity<EmpresaDto> save( @RequestBody EmpresaDto empresaDto, HttpServletResponse response) {
         Empresa empresa = empresaService.fromDTO(empresaDto);
         EmpresaDto dto = new EmpresaDto(empresaService.save(empresa));
         publisher.publishEvent(new RecursoCriadoEvent(this, response, dto.getId()));
@@ -55,11 +55,11 @@ public class EmpresaResource {
     @CrossOrigin
     @ApiOperation(value = "Atualiza uma empresa")
     @PutMapping("/atualizaEmpresa/{id}")
-    public ResponseEntity<EmpresaDto> update(@PathVariable Long id, @Valid @RequestBody EmpresaDto empresaDto, HttpServletResponse response) {
+    public ResponseEntity<EmpresaDto> update(@PathVariable Long id, @RequestBody EmpresaDto empresaDto, HttpServletResponse response) {
         Empresa empresa = empresaService.fromDTO(empresaDto);
         empresa.setId(id);
         EmpresaDto dto = new EmpresaDto(empresaService.update(empresa));
-        publisher.publishEvent(new RecursoCriadoEvent(this, response, dto.getId()));
+        //publisher.publishEvent(new RecursoCriadoEvent(this, response, dto.getId()));
         return ResponseEntity.ok().body(dto);
     }
 

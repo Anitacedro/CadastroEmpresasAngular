@@ -1,5 +1,5 @@
 <div class="col-md-6 user-container">
-    <h2 class="text-center">Novo Contato</h2>
+    <h2 class="text-center">Novo Cadastro</h2>
     <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
 
       <div class="form-group">
@@ -20,9 +20,10 @@
         <small *ngIf="addForm.controls.razaoSocial.invalid && !addForm.controls.razaoSocial.pristine">Informe a Razão Social</small>
       </div>
 
+
       <div class="form-group">
-        <label for="contato">Telefone:</label>
-        <input formControlName="contato" placeholder="Contato" name="contato" class="form-control" id="contato">
+        <label for="Contato">Telefone:</label>
+        <input type="text" formControlName="contato" placeholder="Contato" name="contato" class="form-control" id="contato">
         <small *ngIf="addForm.controls.contato.invalid && !addForm.controls.contato.pristine">Somente números com ou sem DDD</small>
       </div>
   
@@ -34,39 +35,36 @@
 
 
       <div class="form-group">
-        <label for="cep">CEP:</label>
-        <input type="text" formControlName="cep" placeholder="Cep" name="cep" class="form-control" id="cep">
+        <label for="Cep">CEP:</label>
+        <input type="text" formControlName="Cep" placeholder="Cep" name="cep" class="form-control" id="cep">
         <small *ngIf="addForm.controls.cep.invalid && !addForm.controls.cep.pristine">Informe o CEP</small>
       </div>
 
       <div class="form-group">
-        <label for="bairro">Bairro:</label>
+        <label for="Bairro">Bairro:</label>
         <input type="text" formControlName="bairro" placeholder="Bairro" name="bairro" class="form-control" id="bairro">
         <small *ngIf="addForm.controls.bairro.invalid && !addForm.controls.bairro.pristine">Informe o Bairro</small>
       </div>
       
             
       <div class="form-group">
-        <label for="logradouro">Logradouro:</label>
+        <label for="Logradouro">Logradouro:</label>
         <input type="text" formControlName="logradouro" placeholder="Logradouro" name="logradouro" class="form-control" id="logradouro">
-        <small *ngIf="addForm.controls.logradouro.invalid && !addForm.controls.logradouro.pristine">Informe o logradouro</small>
       </div>
 
       <div class="form-group">
-        <label for="complemento">Complemento:</label>
-        <input formControlName="complemento" placeholder="Complemento" name="complemento" class="form-control" id="complemento">
+        <label for="Complemento">Complemento:</label>
+        <input type="text" formControlName="complemento" placeholder="Complemento" name="complemento" class="form-control" id="complemento">
       </div>
         
       <div class="form-group">
-        <label for="cidade">Cidade:</label>
+        <label for="Cidade">Cidade:</label>
         <input type="text" formControlName="cidade" placeholder="Cidade" name="cidade" class="form-control" id="cidade">
-        <small *ngIf="addForm.controls.cidade.invalid && !addForm.controls.cidade.pristine">Informe a Cidade</small>
       </div>
 
       <div class="form-group">
-        <label for="estado">Estado:</label>
+        <label for="Estado">Estado:</label>
         <input type="text" formControlName="estado" placeholder="Estado" name="estado" class="form-control" id="estado">
-        <small *ngIf="addForm.controls.estado.invalid && !addForm.controls.estado.pristine">Informe o Estado</small>
       </div>
 
       
