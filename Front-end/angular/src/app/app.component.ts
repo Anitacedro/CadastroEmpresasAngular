@@ -9,4 +9,5 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Aprendendo angular';
   private router: Router;
+  public paginaAtual = 1; 
 }

@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class ListUserComponent implements OnInit {
 
+  public paginaAtual = 1;
   public users: User[] = [];
   public consulta: FormGroup;
   searchText;

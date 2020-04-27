@@ -4,8 +4,8 @@
 
       <div class="form-group">
         <label for="CNPJ">CNPJ:</label>
-        <input type="text" formControlName="cnpj" placeholder="CNPJ" name="cnpj" class="form-control" id="cnpj">
-        <small *ngIf="addForm.controls.cnpj.invalid && !addForm.controls.cnpj.pristine">Informe o cnpj</small>
+        <input type="text" formControlName="cnpj" name="cnpj" class="form-control" onblur="validarCNPJ(this)" maxlength="18" id="cnpj" placeholder= "99.999.999/9999-99">
+        <small *ngIf="addForm.controls.cnpj.invalid && !addForm.controls.cnpj.pristine ">Informe o cnpj</small>
       </div>
   
       <div class="form-group">
@@ -15,14 +15,14 @@
       </div>
 
       <div class="form-group">
-        <label for="RazaoSocial">Razão Social:</label>
+        <label for="razaoSocial">Razão Social:</label>
         <input type="text" formControlName="razaoSocial" placeholder="RazaoSocial" name="razaoSocial" class="form-control" id="razaoSocial">
         <small *ngIf="addForm.controls.razaoSocial.invalid && !addForm.controls.razaoSocial.pristine">Informe a Razão Social</small>
       </div>
 
 
       <div class="form-group">
-        <label for="Contato">Telefone:</label>
+        <label for="contato">Telefone:</label>
         <input type="text" formControlName="contato" placeholder="Contato" name="contato" class="form-control" id="contato">
         <small *ngIf="addForm.controls.contato.invalid && !addForm.controls.contato.pristine">Somente números com ou sem DDD</small>
       </div>
@@ -35,35 +35,37 @@
 
 
       <div class="form-group">
-        <label for="Cep">CEP:</label>
+        <label for="cep">CEP:</label>
         <input type="text" formControlName="Cep" placeholder="Cep" name="cep" class="form-control" id="cep">
         <small *ngIf="addForm.controls.cep.invalid && !addForm.controls.cep.pristine">Informe o CEP</small>
       </div>
 
+      <button class="btn btn-danger" (click)="consultarCep()">Consultar Cep</button>
+
       <div class="form-group">
-        <label for="Bairro">Bairro:</label>
+        <label for="bairro">Bairro:</label>
         <input type="text" formControlName="bairro" placeholder="Bairro" name="bairro" class="form-control" id="bairro">
         <small *ngIf="addForm.controls.bairro.invalid && !addForm.controls.bairro.pristine">Informe o Bairro</small>
       </div>
       
             
       <div class="form-group">
-        <label for="Logradouro">Logradouro:</label>
+        <label for="logradouro">Logradouro:</label>
         <input type="text" formControlName="logradouro" placeholder="Logradouro" name="logradouro" class="form-control" id="logradouro">
       </div>
 
       <div class="form-group">
-        <label for="Complemento">Complemento:</label>
+        <label for="complemento">Complemento:</label>
         <input type="text" formControlName="complemento" placeholder="Complemento" name="complemento" class="form-control" id="complemento">
       </div>
         
       <div class="form-group">
-        <label for="Cidade">Cidade:</label>
+        <label for="cidade">Cidade:</label>
         <input type="text" formControlName="cidade" placeholder="Cidade" name="cidade" class="form-control" id="cidade">
       </div>
 
       <div class="form-group">
-        <label for="Estado">Estado:</label>
+        <label for="estado">Estado:</label>
         <input type="text" formControlName="estado" placeholder="Estado" name="estado" class="form-control" id="estado">
       </div>
 

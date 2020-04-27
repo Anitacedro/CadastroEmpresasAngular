@@ -33,4 +33,8 @@ export class ApiService {
   deleteUser(id: number): Observable<any[]> {
     return this.http.delete<any>(this.baseUrl + 'deletarEmpresa/'+ id);
   }
+
+  consultCep(user: User): Observable<any[]> {
+    return this.http.get<any>("https://viacep.com.br/ws/" + Number(user.cep) + '/json');
+  }
 }

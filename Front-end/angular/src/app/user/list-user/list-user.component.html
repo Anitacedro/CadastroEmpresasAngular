@@ -23,7 +23,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let user of users | filter:searchText">
+      <tr *ngFor="let user of users | paginate: { itemsPerPage: 5, currentPage: paginaAtual }; let i = index">
         <td>{{user.cnpj}}</td>
         <td>{{user.nome}}</td>
         <td>{{user.razaoSocial}}</td>
@@ -43,5 +43,6 @@
         </td>
       </tr>
       </tbody>
+      <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
     </table>
   </div>
