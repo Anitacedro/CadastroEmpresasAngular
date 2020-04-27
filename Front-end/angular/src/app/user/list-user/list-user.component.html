@@ -1,0 +1,49 @@
+<div class="col-md-6 user-container">
+    <h2 style="text-align: center;">Contatos</h2>
+  
+    <div class="search-user">
+      <input class="form-control" size=100 type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Busque por Nome, Email, Telefone ou Endereço ">
+    </div>
+  
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>CNPJ</th>
+        <th>Nome</th>
+        <th>Razão Social</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Logradouro</th>
+        <th>CEP</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th>Bairro</th>
+        <th>Complemento</th>
+        <th style="text-align: center;">Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users | filter:searchText">
+        <td>{{user.cnpj}}</td>
+        <td>{{user.nome}}</td>
+        <td>{{user.razaoSocial}}</td>
+        <td>{{user.contato}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.logradouro}}</td>
+        <td>{{user.cep}}</td>
+        <td>{{user.cidade}}</td>
+        <td>{{user.estado}}</td>
+        <td>{{user.bairo}}</td>
+        <td>{{user.complemento}}</td>
+        <td align="center">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Ações para os Contatos!">
+            <button class="btn btn-success" (click)="editUser(user)">
+            </button>
+            <button class="btn btn-danger" (click)="deleteUser(user)">
+            </button>       
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
