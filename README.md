@@ -10,5 +10,5 @@ e senha do arquivo.
 Na aplicação foi criado um swagger para chamada dos endpoints. Para acesso (http://localhost:80080/swagger-ui.html)
 
 Para executar o angular, é necessário entrar na pasta do projeto CadastroEmpresasAngular/Front-end/angular/ e executar 
-as seguintes chamadas : ng add @ng-bootstrap/ng-bootstrap e npm i ng2-search-filter --save e então basta dar o comando "ng serve" dentro da pasta que o serviço será startado.
+as seguintes chamadas : ng add @ng-bootstrap/ng-bootstrap,npm install ngx-pagination --save e npm i ng2-search-filter --save e então basta dar o comando "ng serve" dentro da pasta que o serviço será startado.
 
