@@ -1,5 +1,5 @@
-<div class="col-md-6 user-container">
-    <h2 style="text-align: center;">Contatos</h2>
+<div class="col-md-12 user-container">
+    <h2 style="text-align: center;">Empresas</h2>
   
     <div class="search-user">
       <input class="form-control" size=100 type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Busque por Nome, Email, Telefone ou Endereço ">
@@ -33,14 +33,12 @@
         <td>{{user.cep}}</td>
         <td>{{user.cidade}}</td>
         <td>{{user.estado}}</td>
-        <td>{{user.bairo}}</td>
+        <td>{{user.bairro}}</td>
         <td>{{user.complemento}}</td>
         <td align="center">
           <div class="btn-group btn-group-sm" role="group" aria-label="Ações para os Contatos!">
-            <button class="btn btn-success" (click)="editUser(user)">
-            </button>
-            <button class="btn btn-danger" (click)="deleteUser(user)">
-            </button>       
+            <button class="btn btn-success" (click)="editUser(user)">Editar</button>
+            <button class="btn btn-danger" (click)="deleteUser(user)">Deletar</button>       
           </div>
         </td>
       </tr>
